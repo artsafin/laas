@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lunch chooser</title>
+	<script>
+		var options = [
+			{
+				name: "pan kot",
+				score: 1.0
+			},
+			{
+				name: "alan-ash",
+				score: 1.0
+			},
+			{
+				name: "shab",
+				score: 1.0
+			},
+			{
+				name: "KFC",
+				score: 1.0
+			},
+			{
+				name: "giros",
+				score: 1.0
+			},
+			{
+				name: "dodo",
+				score: 1.0
+			},
+			{
+				name: "dobraya",
+				score: 0.0
+			},
+		];
+
+		function randomize(objs) {
+			var rnd = Math.floor(Math.random() * objs.length)
+
+			return objs[rnd];
+		}
+	</script>
+</head>
+<body>
+	<button id="drawBtn">Draw!</button>
+	<div id="result"><div>
+
+	<script>
+		var btn = document.getElementById("drawBtn");
+		var res = document.getElementById("result");
+
+		btn.addEventListener("click", function(){
+			res.innerHTML = randomize(options).name;
+		});
+	</script>
+</body>
+</html>
